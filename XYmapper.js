@@ -155,7 +155,7 @@ function clearButton(event) {
     freestyleCounter--;
     event.className = "disabledPixel";
     pixelarray[eventindex][0] = "D";
-  } else {
+  } else if (pixelarray[eventindex][0] == "D" && freestyleCounter >= lastFreestyle) {
     event.className = "ledpixel";
     pixelarray[eventindex][0] = "E";
     pixelarray[eventindex][3] = freestyleCounter;
@@ -325,15 +325,16 @@ function printMap() {
     while (freeOrder < num_leds) {
       if (pixelarray[freeOrder][3] == ledindex) {
         mapHTML += pad('    ', pixelarray[freeOrder][2], true);
-        if (ledindex < countActiveLEDs()) mapHTML += ",";
-        if ((ledindex+1) % xdim === 0) mapHTML += '<BR>';
+        if (ledindex < (countActiveLEDs() - 1)) mapHTML += ","; {
+          if ((ledindex+1) % xdim === 0) mapHTML += '<BR>';
+        }
         break;
       } else {
         freeOrder++;
       }
     }     
   }
-  mapHTML += ']}</PRE>';
+  mapHTML += '<BR>]}</PRE>';
 
   mapDiv.innerHTML = mapHTML;
 }
