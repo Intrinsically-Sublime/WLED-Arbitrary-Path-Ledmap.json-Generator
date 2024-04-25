@@ -324,7 +324,7 @@ function printMap() {
     var freeOrder = 0;
     while (freeOrder < num_leds) {
       if (pixelarray[freeOrder][3] == ledindex) {
-        mapHTML += pad('   ', pixelarray[freeOrder][2], true);
+        mapHTML += pad('    ', pixelarray[freeOrder][2], true);
         if (ledindex < countActiveLEDs()) mapHTML += ",";
         if ((ledindex+1) % xdim === 0) mapHTML += '<BR>';
         break;
