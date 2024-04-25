@@ -13,9 +13,9 @@ var ydim = 0;
 var pixelarray = [];
 var serpentine = 0;
 var hflip = 0;
-var vflip = 1;
+var vflip = 0;
 var vertical = 0;
-var wiringSerp = "serpentine";
+var wiringSerp = "striped";
 var wiringVert = "horizontal";
 var wiringVFlip = "top";
 var wiringHFlip = "left";
@@ -307,7 +307,7 @@ function printMap() {
   mapHTML = "";
   mapHTML += '<PRE>';
   mapHTML += 'wLED ledmap.json file.<BR>';
-  mapHTML += 'Wired freestyle following the order clicked.<BR>';
+  mapHTML += 'Wired in ' + wiringVert + ' ' + wiringSerp + ' layout starting at the ' + wiringVFlip + ' ' + wiringHFlip + ' corner.<BR>';
   mapHTML += '' + countActiveLEDs() + ' LEDs visible out of ' + (xdim * ydim) + '<BR><BR>';
   mapHTML += '</PRE>';
 
