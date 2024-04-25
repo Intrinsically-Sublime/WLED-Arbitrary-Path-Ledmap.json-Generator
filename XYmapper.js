@@ -31,6 +31,12 @@ function download(){
     a.click(); // Trigger a click on the element
 }
 
+function copyOutput(){
+  var result = document.getElementById("result").innerText;
+  navigator.clipboard.writeText(result);
+  alert('Copied ' + matrixName + 'to clipboard');
+}
+
 function serpentineLayout(event) {
   if (event.checked) {
     serpentine = 1;
