@@ -325,8 +325,11 @@ function printMap() {
     while (freeOrder < num_leds) {
       if (pixelarray[freeOrder][3] == ledindex) {
         mapHTML += pad('    ', pixelarray[freeOrder][2], true);
-        if (ledindex < (countActiveLEDs() - 1)) mapHTML += ","; {
-          if ((ledindex+1) % xdim === 0) mapHTML += '<BR>';
+        if (ledindex < (countActiveLEDs() - 1)) {
+          mapHTML += ",";
+          if ((ledindex+1) % xdim === 0) {
+            mapHTML += '<BR>';
+          }
         }
         break;
       } else {
