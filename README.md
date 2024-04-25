@@ -25,4 +25,4 @@ FastLED XY remapper https://intrinsically-sublime.github.io/FastLED-XY-Map-Gener
 Based on<a href="https://github.com/Intrinsically-Sublime/FastLED-XY-Map-Generator"> XY-Map-Generator</a> by Intrinsically-Sublime
 which is based on<a href="https://github.com/macetech/FastLED-XY-Map-Generator"> XY-Map-Generator</a> by Garrett Mace
 
-![Screenshot]()
+![Screenshot](https://github.com/Intrinsically-Sublime/WLED-Arbitrary-Path-Ledmap.json-Generator/blob/main/WLED-arb-path_screenshot.png)
