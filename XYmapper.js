@@ -23,10 +23,17 @@ var freestyleCounter = 0;
 var lastFreestyle = 0;
 
 function download(){
+    matrixName = (document.getElementById("matrixName")).value;
+    printMap();
     var a = document.body.appendChild(
         document.createElement("a")
     );
-    a.download = "ledmap.json";
+    if (matrixName == "my_matrix") {
+      a.download = "ledmap.json";
+    } else {
+      a.download = matrixName + ".ledmap.json";
+    }
+
     a.href = "data:text/html," + document.getElementById("result").innerText; // Grab the HTML
     a.click(); // Trigger a click on the element
 }
@@ -94,6 +101,7 @@ function verticalLayout(event) {
 }
 
 function buildArray(num_leds) {
+  freeStyle = (document.getElementById("freeCHK")).checked;
   serpentine = (document.getElementById("serpentineCHK")).checked;
   vertical = (document.getElementById("verticalCHK")).checked;
   hflip = (document.getElementById("hflipCHK")).checked;
