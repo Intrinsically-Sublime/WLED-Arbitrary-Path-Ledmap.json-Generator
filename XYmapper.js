@@ -101,7 +101,6 @@ function verticalLayout(event) {
 }
 
 function buildArray(num_leds) {
-  freeStyle = (document.getElementById("freeCHK")).checked;
   serpentine = (document.getElementById("serpentineCHK")).checked;
   vertical = (document.getElementById("verticalCHK")).checked;
   hflip = (document.getElementById("hflipCHK")).checked;
