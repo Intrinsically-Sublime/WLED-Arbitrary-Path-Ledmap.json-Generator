@@ -25,18 +25,23 @@
       <li>You can only disable pixels in the reverse order you clicked them.
       <li>Download the resulting "ledmap.json" file and upload it to your device via http://yourdeviceip/edit (does not work in AP mode)<br>
     </ol>
+    <b> **</b> Allows you to set the first LED number. Example: Your matrix is at the end of a strip.<br>
     <hr>
     <div class="controls">
       <div class="optionBox">
-        <label><b>Array</b></label>
-            <div class="inputBox">
-              <input id="xdim" type="number" name="xdim" min="1" value="16"/>
-              <label class="inputText">Width</label>
-            </div>
-            <div class="inputBox">
-              <input id="ydim" type="number" name="ydim" min="1" value="5"/>
-              <label class="inputText">Height</label>
-            </div>
+        <label class="nameBox" ><b>Array</b></label>
+          <div class="inputBox">
+            <input id="xdim" type="number" name="xdim" min="1" value="16"/>
+            <label class="inputText">Width</label>
+          </div>
+          <div class="inputBox">
+            <input id="ydim" type="number" name="ydim" min="1" value="5"/>
+            <label class="inputText">Height</label>
+          </div>
+          <div class="inputBox">
+            <input id="startIndex" type="number" name="startIndex" min="0" value="0"/>
+            <label class="inputText">Start (n)**</label>
+          </div>
       </div>
       <div class="optionBox">
         <br>
@@ -47,7 +52,7 @@
           </div>
       </div>
       <div class="optionBox">
-        <label><b>Options</b></label>
+        <label class="nameBox" ><b>Options</b></label>
           <div class="buildBox">
           <input type="checkbox" id="serpentineCHK" onchange="serpentineLayout(this)">
           <label for="discardCHK">Serpentine</label><br>
@@ -65,7 +70,7 @@
         </div>
       </div>
       <div class="optionBox">
-          <label for="discardCHK"><b>Matrix name</b></label>
+          <label  class="nameBox" ><b>Matrix name</b></label>
         <div class="buildBox">
           <input class="nameBox" id="matrixName" type="text" name="matrixName" value="my_matrix"/><br>
           <button class="button" id="downloadFile" onclick="download()">Download</button><br>
